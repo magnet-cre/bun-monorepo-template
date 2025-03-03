@@ -1,0 +1,29 @@
+# Node & Bun dependency directories
+node_modules/
+bun_modules/
+
+# Build output directories
+dist/
+build/
+
+# Log files
+*.log
+logs/
+
+# Environment variable files (keep these out of source control)
+.env
+.env.local
+.env.*.local
+
+# Coverage reports (if you run tests)
+coverage/
+
+# OS-specific files
+.DS_Store
+
+# Temporary files and directories
+tmp/
+temp/
+
+# Docker artifacts
+docker-compose.override.yml

@@ -1,0 +1,9 @@
+{
+  "name": "@project_root/logger",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "dependencies": {
+    "winston": "^3.17.0"
+  }
+}

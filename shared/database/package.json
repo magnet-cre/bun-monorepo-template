@@ -1,0 +1,9 @@
+{
+  "name": "@project_root/database",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "dependencies": {
+    "mssql": "^11.0.1"
+  }
+}

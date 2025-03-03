@@ -1,0 +1,14 @@
+{
+  "name": "project_root",
+  "module": "index.js",
+  "type": "module",
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "build:<app_name>": "docker build -f apps/<app_name>/Dockerfile --no-cache -t ghcr.io/magnet-cre/mm:$(jq -r .version apps/<app_name>/package.json) -t ghcr.io/magnet-cre/mm:latest . && docker push ghcr.io/magnet-cre/mm:$(jq -r .version apps/<app_name>/package.json) && docker push ghcr.io/magnet-cre/mm:latest",
+    "deploy:<app_name>": "cd apps/<app_name> && kubectl apply -f deploy/ --kubeconfig ~/.kube/config"
+  }
+}

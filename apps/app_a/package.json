@@ -1,0 +1,16 @@
+{
+  "name": "@project_root/app_a",
+  "version": "0.0.0",
+  "main": "src/server.js",
+  "dependencies": {
+    "@project_root/database": "workspace:*",
+    "@project_root/logger": "workspace:*",
+    "hono": "^4.7.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "scripts": {
+    "build": "bun build src/server.js --outdir dist --minify --target bun",
+    "start": "bun run --env-file=.env src/server.js",
+    "dev": "bun run --watch --env-file=.env src/server.js"
+  }
+}
